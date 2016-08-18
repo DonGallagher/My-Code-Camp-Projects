@@ -1,0 +1,16 @@
+function repeatStringNumTimes(str, num) {
+  // repeat after me
+  newStr="";
+  count=0;
+  
+  while (count < num) {
+    newStr=newStr.concat(str);
+    count++;
+  }
+ 
+  
+  
+  return newStr;
+}
+
+repeatStringNumTimes("*", 3);
