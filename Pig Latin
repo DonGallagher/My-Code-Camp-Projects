@@ -1,0 +1,36 @@
+function isVowel(testString,pos) {
+  if (testString.charAt(pos) == "a" || 
+      testString.charAt(pos) == "e" || 
+      testString.charAt(pos) == "i" || 
+      testString.charAt(pos) == "o" || 
+      testString.charAt(pos) == "u" ||
+      testString.charAt(pos) == "y"  ) {
+      return true;
+      } 
+      else {
+        return false;
+         }
+}
+
+function translatePigLatin(str) {
+
+  var newChar="";
+ 
+  if (isVowel(str,0) === true) {
+      str = str + "way";
+     } 
+        else {
+             newChar=str.charAt(0);
+            if (isVowel(str,1) === false) {
+                newChar=newChar+str.charAt(1);
+                str=str.slice(2)+newChar+"ay";
+               } else {
+                 str=str.slice(1)+newChar+"ay";
+                      }
+        }
+ 
+  
+  return str;
+}
+
+translatePigLatin("glove");
