@@ -1,0 +1,17 @@
+function sumAll(arr) {
+  
+  
+  arr.sort();
+  i=Math.min.apply(null, arr);
+  tally=0;
+  console.log(Math.max.apply(null, arr));
+  console.log(Math.min.apply(null, arr));
+  while (i<=Math.max.apply(null, arr)){
+    tally=tally+i;
+    i ++;
+   
+  }
+  return tally;
+}
+
+sumAll([10, 5]);
