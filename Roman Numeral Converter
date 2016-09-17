@@ -1,0 +1,36 @@
+
+function convertToRoman(num) {
+  roman = "";
+  ones = ["I","II","III","IV","V","VI","VII","VIII","IX"];
+  tens = ["X","XX","XXX","XL","L","LX","LXX","LXXX","XC"];
+  hundreds = ["C","CC","CCC","CD","D","DC","DCC","DCCC","CM"];
+  thousands = ["M","MM","MMM"];
+  current=num;
+
+  if (num >= 1000) {
+    current = Math.floor(num/1000);
+    roman = (thousands[current-1]);
+    num -= current*1000;
+   }
+ 
+  if (num >= 100) {
+    current = Math.floor(num/100);
+    roman = roman + (hundreds[current-1]);
+    num -= current*100;
+ }
+  
+  if (num >= 10) {
+    current = Math.floor(num/10);
+    roman = roman + (tens[current-1]);
+    num -= (current*10);
+  }
+
+  if (num >=1) {
+    roman = roman + (ones[num-1]);
+  }
+ 
+
+  return roman;
+}
+
+convertToRoman(1006);
