@@ -1,0 +1,30 @@
+
+function pairElement(str) {
+  endArray=[];
+  i=0;
+  
+  while (i < str.length) {
+    if (str[i] == "G"){
+      endArray[i] = ["G","C"];
+    }
+    if (str[i] == "C"){
+      endArray[i] = ["C","G"];
+    }
+    if (str[i] == "A"){
+      endArray[i] = ["A","T"];
+    }
+    if (str[i] == "T"){
+      endArray[i] = ["T","A"];
+    }
+      
+    i++;
+  }
+  
+  
+  
+  
+  
+  return endArray;
+}
+
+pairElement("GCG");
