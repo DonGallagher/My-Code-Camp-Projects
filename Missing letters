@@ -1,0 +1,35 @@
+
+function fearNotLetter(str) {
+
+  var char1 = str.charCodeAt(0);
+  var lastLetter = '';
+  var char2 = '';
+
+
+  var addChar = function(a, b) {
+    while (a - 1 > b) {
+      b++;
+      lastLetter += String.fromCharCode(b);
+    }
+    return lastLetter;
+  };
+
+ 
+  for (var i = 1; i < str.length; i++) {
+    console.log (str.charCodeAt(i));
+    char2 = str.charCodeAt(i);
+    if (char2 - char1 > 1) {
+      addChar(char2, char1);
+    }
+   char1 = str.charCodeAt(i);
+  }
+
+  
+  if (lastLetter === '')
+    return undefined;
+  else
+    return lastLetter;
+}
+
+
+fearNotLetter("abcdefghjklmno");
