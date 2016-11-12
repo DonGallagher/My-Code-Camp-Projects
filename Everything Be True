@@ -1,0 +1,18 @@
+function truthCheck(collection, pre) {
+  // Is everyone being true?
+ 
+  var answer = true;
+  var i = 0;
+  
+  while (i < collection.length) {
+     if (!collection[i].hasOwnProperty(pre) || collection[i][pre] === 0 || collection[i][pre] === "" || collection[i][pre] === null || typeof collection[i][pre] === "undefined" || isNaN(collection[i][pre]) && typeof collection[i][pre] === "number") {
+      
+      answer=false;
+      }
+     i++;
+    }
+ 
+  return answer;
+}
+
+truthCheck([{"user": "Tinky-Winky", "sex": "male"}, {"user": "Dipsy", "sex": "male"}, {"user": "Laa-Laa", "sex": "female"}, {"user": "Po", "sex": "female"}], "sex");
